@@ -1,0 +1,75 @@
+html,head,body{
+    margin: 0;
+    padding: 0;
+}
+
+flask[name="ImgFormatError"]{
+    width:100vw;;
+    height: 500px;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    
+    perspective: 300px;
+    
+}
+
+.float{
+    width: 360px;
+    height: 250px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5px;
+    box-shadow: 0 5px 15px 3px #dfdfdf;
+    
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    
+     transition: transform .5s ease;
+    -webkit-transition: transform .5s ease;
+    -webkit-transition: -webkit-transform .5s ease;
+    -o-transition: -o-transform .5s ease;
+    -ms-transition: -ms-transform .5s ease;
+    -moz-transition: -moz-transform .5s ease;
+}
+.float>button{
+    width:75px;
+    height: 35px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 3px 2px #dfdfdf inset;
+    color: lightgray;
+    text-shadow: 1px 1px 2px grey;
+    
+    font-size: 90%;
+    letter-spacing: 5px;
+    
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    
+     transition: background .5s ease-in;
+    -webkit-transition: background .5s ease-in;
+    -webkit-transition: background .5s ease-in;
+    -o-transition: background .5s ease-in;
+    -ms-transition: background .5s ease-in;
+    -moz-transition: background .5s ease-in;
+}
+.float>button:hover{
+    box-shadow:none;
+    text-shadow: none;
+    background-color: #dfdfdf;
+    color: white;
+}
+
+.ErrorTip{
+    width: 99%;
+    height: auto;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    color: grey;
+}

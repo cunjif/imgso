@@ -1,0 +1,33 @@
+<! doctype html>
+<html lang="zh">
+    <head>
+        <title>搜索结果</title>
+        <meta http-equiv="content-type" content="" charset="utf-8">
+        <meta>
+<!--        <link rel="stylesheet" type="text/css" href="../static/css/style.css">-->
+        <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/jquery-ui.min.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" >
+        <script type="text/javascript" src="{{url_for('static',filename='js/jquery-1.8.0.min.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='js/jquery-ui.min.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='js/resultsort.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='js/error.js')}}"></script>
+    </head>
+    <body>
+        {% if resultImage %}
+            <a class="res-btn" href="{{url_for('index')}}">返回搜索</a>&nbsp;<label class='add-tip'>相似度范围7.5~~10</label>
+            <div class="res-contain">
+                {% for key,image in resultImage.items() %}
+                    <div class="res-image res-bottle">
+                        <img id="{{key}}" src="{{url_for('static',filename='dbimages/%s' % image)}}" />
+                        <label class="similiar-intro">相似度：{{key}}</label>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+                <div class="res-tips">
+                    <h2>没有查到合适的图片</h2>
+                    <a class="res-rtbtn" href="{{url_for('index')}}">返回</a>
+                </div>
+        {% endif %}
+    </body>
+</html>
