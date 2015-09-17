@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 #-*- coding:utf-8 -*-
+import sys,os,re
+rootpath = os.getcwd()
+rootpath = re.findall(r'.+imgso', rootpath, flags=0)[0]
+sys.path.insert(0, rootpath)
 
 try:
     from __init__ import app
